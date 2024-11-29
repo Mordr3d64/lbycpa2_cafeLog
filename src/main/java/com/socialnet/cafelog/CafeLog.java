@@ -2,10 +2,12 @@ package com.socialnet.cafelog;
 
 public class CafeLog {
     public static void main(String[] args) {
+
         // Login/Logout System
         LoginLogoutSystem loginSystem = new LoginLogoutSystem();
         loginSystem.login("Alice");
         loginSystem.login("Bob");
+        System.out.println("ACTIVE USERS ");
         loginSystem.displayActiveUsers();
         loginSystem.logout("Alice");
 
