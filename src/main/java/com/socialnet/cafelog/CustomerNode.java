@@ -24,34 +24,38 @@ class CustomerNode {
 class LoginLogoutSystem {
     private CustomerNode head;
 
-    public void login(String customerName) {
+    public String login(String customerName) {
         CustomerNode newNode = new CustomerNode(customerName, LocalDateTime.now());
         newNode.next = head;
         head = newNode;
-        System.out.println(customerName + " logged in at " + newNode.loginTime);
+        return customerName + " has logged in at \n" + LocalDateTime.now();
     }
 
-    public void logout(String customerName) {
+    public String logout(String customerName) {
         CustomerNode current = head;
         while (current != null) {
             if (current.customerName.equals(customerName) && current.logoutTime == null) {
                 current.logoutTime = LocalDateTime.now();
                 System.out.println(customerName + " logged out. Duration: " + current.getUsageDuration() + " minutes");
-                return;
+                return "Customer " + customerName + " has logged out.\nDuration: " + current.getUsageDuration() + " minutes";
             }
             current = current.next;
         }
         System.out.println("Customer " + customerName + " is not logged in!");
+        return "Customer " + customerName + " is not logged in!";
     }
 
-    public void displayActiveUsers() {
+    public Object displayActiveUsers() {
         CustomerNode current = head;
         System.out.println("Active Users:");
         while (current != null) {
             if (current.logoutTime == null) {
                 System.out.println("- " + current.customerName + " (Logged in at: " + current.loginTime + ")");
+                return "- " + current.customerName + " (Logged in at: " + current.loginTime + ")";
+
             }
             current = current.next;
         }
+        return null;
     }
 }
