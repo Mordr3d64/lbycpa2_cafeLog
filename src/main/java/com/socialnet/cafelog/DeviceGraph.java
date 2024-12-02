@@ -21,19 +21,22 @@ class DeviceGraph {
         }
     }
 
-    public void displayNetwork() {
-        System.out.println("Device Network:");
+    public String displayNetwork() {
+        StringBuilder text = new StringBuilder("Device Network:\n");
         for (String device : graph.keySet()) {
-            System.out.println(device + " -> " + graph.get(device));
+            text.append(device).append(" -> ").append(graph.get(device)).append("\n");
         }
+        return text.toString();
     }
 
-    public void findAvailableDevices() {
-        System.out.println("Available Devices:");
+
+    public String findAvailableDevices() {
+        StringBuilder text = new StringBuilder("Available Devices:\n");
         for (String device : graph.keySet()) {
             if (graph.get(device).isEmpty()) {
-                System.out.println("- " + device);
+                text.append("- ").append(device).append("\n");
             }
         }
+        return text.toString();
     }
 }
