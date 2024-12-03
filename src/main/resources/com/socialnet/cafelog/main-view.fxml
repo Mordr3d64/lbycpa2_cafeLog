@@ -22,24 +22,24 @@
                <image>
                   <Image url="@../../../logo.png" />
                </image></ImageView>
-            <Button layoutX="289.0" layoutY="281.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onComputerLoginClick" prefHeight="25.0" prefWidth="150.0" text="  Computer Login  " textFill="#2e2006">
+            <Button layoutX="289.0" layoutY="281.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onComputerLoginClick" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #4F2E12;" text="  Computer Login  " textFill="#f8f4eb">
                <font>
-                  <Font name="Bookshelf Symbol 7" size="12.0" />
+                  <Font name="Book Antiqua" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="289.0" layoutY="303.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onServiceQueueClick" prefHeight="25.0" prefWidth="150.0" text="  Service Queue  " textFill="#2e2006">
+            <Button layoutX="289.0" layoutY="303.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onServiceQueueClick" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #4F2E12;" text="  Service Queue  " textFill="#f8f4eb">
                <font>
-                  <Font name="Bookshelf Symbol 7" size="12.0" />
+                  <Font name="Book Antiqua" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="289.0" layoutY="326.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onAvailableDevicesClick" prefHeight="25.0" prefWidth="150.0" text="Available Devices" textFill="#2e2006">
+            <Button layoutX="289.0" layoutY="326.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onAvailableDevicesClick" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #4F2E12;" text="Available Devices" textFill="#f8f4eb">
                <font>
-                  <Font name="Bookshelf Symbol 7" size="12.0" />
+                  <Font name="Book Antiqua" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="exit" layoutX="252.0" layoutY="348.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onExitClick" prefHeight="25.0" prefWidth="150.0" text="             Exit             " textFill="#2e2006">
+            <Button fx:id="exit" layoutX="252.0" layoutY="348.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onExitClick" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #4F2E12;" text="             Exit             " textFill="#f8f4eb">
                <font>
-                  <Font name="Bookshelf Symbol 7" size="12.0" />
+                  <Font name="Book Antiqua" size="12.0" />
                </font>
             </Button>
          </children>

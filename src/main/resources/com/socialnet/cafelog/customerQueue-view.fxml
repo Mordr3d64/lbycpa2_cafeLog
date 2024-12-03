@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextArea?>
@@ -14,7 +13,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-image: url(&quot;coffeebg.jpg&quot;); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.socialnet.cafelog.CustomerQueueController">
    <top>
-      <VBox alignment="CENTER" spacing="10.0" prefHeight="100.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="100.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="94.0" fitWidth="114.0" preserveRatio="true">
                <image>
@@ -25,14 +24,17 @@
       </VBox>
    </top>
    <left>
-      <VBox alignment="CENTER" spacing="15.0" prefWidth="250.0" BorderPane.alignment="CENTER" style="-fx-background-color: rgba(255, 255, 255, 0.8); -fx-padding: 20;">
+      <VBox alignment="CENTER" prefWidth="250.0" spacing="15.0" style="-fx-background-color: rgba(255, 255, 255, 0.8); -fx-padding: 20;" BorderPane.alignment="CENTER">
          <children>
             <TextField fx:id="userInQueue" alignment="CENTER" prefHeight="30.0" promptText="Enter customer name" />
-            <Button fx:id="loginButton" mnemonicParsing="false" onAction="#handleEnqueueUser" prefHeight="40.0" text="Enqueue Customer" style="-fx-font-size: 14px; -fx-background-color: #d4a373; -fx-text-fill: white;" />
-            <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#handleDequeueUser" prefHeight="40.0" text="Dequeue Customer" style="-fx-font-size: 14px; -fx-background-color: #d4a373; -fx-text-fill: white;" />
-            <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleBackToMenuClick" prefHeight="30.0" text="Back to Menu" style="-fx-font-size: 12px; -fx-background-color: transparent; -fx-text-fill: #2e2006;" />
-            <TextArea fx:id="activityLabel" prefHeight="120.0" wrapText="true" promptText="Activity log" style="-fx-font-size: 12px;" />
-            <TextArea fx:id="waitingTimeLabel" prefHeight="120.0" wrapText="true" promptText="Estimated waiting time" style="-fx-font-size: 12px;" />
+            <Button fx:id="loginButton" mnemonicParsing="false" onAction="#handleEnqueueUser" prefHeight="40.0" style="-fx-font-size: 14px; -fx-background-color: #d4a373; -fx-text-fill: white;" text="Enqueue Customer">
+               <font>
+                  <Font name="Book Antiqua" size="12.0" />
+               </font></Button>
+            <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#handleDequeueUser" prefHeight="40.0" style="-fx-font-size: 14px; -fx-background-color: #d4a373; -fx-text-fill: white;" text="Dequeue Customer" />
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleBackToMenuClick" prefHeight="30.0" style="-fx-font-size: 12px; -fx-background-color: transparent; -fx-text-fill: #2e2006;" text="Back to Menu" />
+            <TextArea fx:id="activityLabel" prefHeight="120.0" promptText="Activity log" style="-fx-font-size: 12px;" wrapText="true" />
+            <TextArea fx:id="waitingTimeLabel" prefHeight="120.0" promptText="Estimated waiting time" style="-fx-font-size: 12px;" wrapText="true" />
          </children>
       </VBox>
    </left>
@@ -44,9 +46,9 @@
       </VBox>
    </center>
    <bottom>
-      <HBox alignment="CENTER" spacing="10.0" prefHeight="50.0" BorderPane.alignment="CENTER" style="-fx-background-color: rgba(0, 0, 0, 0.1);">
+      <HBox alignment="CENTER" prefHeight="50.0" spacing="10.0" style="-fx-background-color: rgba(0, 0, 0, 0.1);" BorderPane.alignment="CENTER">
          <children>
-            <TextArea fx:id="footerText" wrapText="true" prefHeight="50.0" promptText="Footer notes or additional information" editable="false" style="-fx-font-size: 12px; -fx-background-color: transparent;" />
+            <TextArea fx:id="footerText" editable="false" prefHeight="50.0" promptText="Footer notes or additional information" style="-fx-font-size: 12px; -fx-background-color: transparent;" wrapText="true" />
          </children>
       </HBox>
    </bottom>
